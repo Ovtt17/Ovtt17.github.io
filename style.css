@@ -28,6 +28,7 @@
 html{
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*HEADER*/
@@ -40,7 +41,7 @@ header{
     min-width: 320px;
     height: 334px;
     text-align: center;
-    background: linear-gradient(180.8deg, #050303 16.69%, hwb(318 3% 6%) 100%);;
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(318 3% 6%) 100%);
 }
 
 header img{
@@ -115,6 +116,7 @@ main{
 /*SECTION 1-2*/
 .main-exchange-container{
     width: 100%;
+    min-width: 320px;
     height: auto;
     padding-top: 80px;
     text-align: center;
@@ -145,7 +147,7 @@ main{
     color: var(--black);
 }
 
-.main-exchange-container p{
+.main-exchange-container .main-exchange-description{
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 1.4rem;
@@ -386,20 +388,177 @@ main{
     color: var(--just-white);
 }
 
-.plans-container {
+.plan-container {
     background-color: var(--off-white);
     text-align: center;
+    min-width: 320px;
 }
 
-.plans-container .plans-title {
+.plan-container .plan-title {
     color: var(--black);
     font-size: 2.4rem;
     line-height: 2.8rem;
-    margin-top: 50px;
+    padding-top: 50px;
 }
-.plans-container .plans-title--description {
-    margin-top: 30px;
+.plan-container .plan-title--description {
     font-size: 1.4rem;
-    line-height: 10px;
     color: var(--warm-black);
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.planes-container--slider {
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.main-table-plan-container{
+    text-align: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.main-table-plan-container .plan-basic-container {
+    background-color: var(--just-white);
+}
+.main-table-plan-container .plan-recommended-container {
+    background-color: #000080;
+}
+.main-table-plan-container .plan-premium-container {
+    background-color: #000000;
+}
+.main-table-plan-container .plan-basic,
+.plan-recommended, .plan-premium {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    top: -15px;
+    left: calc(50% - 60px);
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 8px;
+    color: var(--just-white);
+}
+.main-table-plan-container .plan-basic {
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(241 3% 6%) 100%);
+}
+.main-table-plan-container .plan-recommended {
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(29 3% 6%) 100%);
+}
+.main-table-plan-container .plan-premium {
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(281 4% 13%) 100%);
+}
+
+.plan-basic-container,
+.plan-recommended-container,
+.plan-premium-container {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.plan-basic-container .plan-title,
+.plan-recommended-container .plan-title,
+.plan-premium-container .plan-title  {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.plan-recommended-container .plan-title,
+.plan-premium-container .plan-title {
+    color: var(--just-white);
+}
+
+.plan-basic-container .plan-price,
+.plan-recommended-container .plan-price,
+.plan-premium-container .plan-price {
+    font-size: 5.3rem;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.plan-basic-container .plan-price {
+    color: var(--black);
+}
+.plan-recommended-container .plan-price {
+    color: var(--just-white);
+}
+.plan-premium-container .plan-price {
+    color: var(--just-white);
+}
+.plan-basic-container sup,
+.plan-recommended-container sup,
+.plan-premium-container sup {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.plan-basic-container sup {
+    color: var(--black);
+}
+.plan-recommended-container sup {
+    color: var(--just-white);
+}
+.plan-premium-container sup {
+    color: var(--just-white);
+}
+
+.plan-basic-container .plan-saving,
+.plan-recommended-container .plan-saving,
+.plan-premium-container .plan-saving  {
+    font-size: 1.2rem;
+    color: #757575;
+    padding-bottom: 15px;
+}
+.plan-recommended-container .plan-saving,
+.plan-premium-container .plan-saving {
+    color: var(--just-white);
+}
+
+.plan-basic-container .plan-btn--basic,
+.plan-recommended-container .plan-btn--recommended,
+.plan-premium-container .plan-btn--premium {
+    width: 150px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    cursor: pointer;
+}
+.plan-basic-container .plan-btn--basic {
+    background-color: rgb(25, 35, 170);
+    border: 2px solid rgb(226, 162, 23);
+    color: var(--just-white);
+}
+.plan-recommended-container .plan-btn--recommended{
+    background-color: var(--just-white);
+    border: 2px solid rgb(226, 162, 23);
+    color: var(--black);
+}
+.plan-premium-container .plan-btn--premium {
+    background-color: rgba(148, 18, 209, 0.979);
+    border: 2px solid #ffffff;
+    color: var(--just-white);
+}
+
+.plan-btn--basic .btn-icon--basic,
+.plan-btn--recommended .btn-icon--recommended,
+.plan-btn--premium .btn-icon--premium {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/icons/orange-right-arrow.svg");
+    vertical-align: text-bottom;
 }
