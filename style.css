@@ -392,7 +392,7 @@ main{
 }
 /*SECTION 4*/
 .bitcoin-img-container {
-    background-image: url('./assets/img/bitcoinbaby2x.png');
+    background-image: url('./assets/img/bitcoinbaby2x.jpg');
     width: 100%;
     min-width: 320px;
     height: 60vh;
