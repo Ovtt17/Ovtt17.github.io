@@ -220,9 +220,10 @@ main{
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 1.9rem;
-    color: var(--off-white  );
-    background-image: url('./assets/img/background-tables.jpg');
+    color: var(--off-white);
+    background-color: var(--black);
 }
+
 
 .currency-table--container .table__top-left,
 .comission-table--container .table__top-left {
@@ -599,4 +600,9 @@ footer .img-container {
     align-items: center;
     font-size: 1.2rem;
     color: var(--just-white);
+}
+
+footer .img-container img {
+    width: 60px;
+    height: 30px;
 }
