@@ -26,10 +26,10 @@
 }
 
 html{
+    scroll-behavior: smooth;
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
 }
-
 /*HEADER*/
 header{
     position: relative;
@@ -40,7 +40,7 @@ header{
     min-width: 320px;
     height: 334px;
     text-align: center;
-    background: linear-gradient(180.8deg, #050303 16.69%, hwb(318 3% 6%) 100%);
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(29 3% 6%) 100%);
 }
 
 header img{
@@ -68,7 +68,8 @@ header img{
 }
 
 .header--tittle-container p {
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 55px;
     font-size: 1.4rem;
     font-weight: 500%;
     line-height: 1.8rem;
@@ -85,11 +86,11 @@ header img{
     display: block;
     margin-top: 30px;
     padding: 15px;
-    width: 229px;
+    width: 240px;
     height: 48px;
     background-color: var(--just-white);
     /*Shadow*/
-    box-shadow: 0px 4px 8px gba(89, 73, 30, 0.16);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
     border: none;
     border-radius: 5px;
     font-size: 1.4rem;
@@ -110,8 +111,8 @@ header img{
 main{
     width: 100%;
     height: auto;
-    padding-bottom: 40px;
-    background-color: var(--off-white);
+    background: linear-gradient(180.8deg, #dedddff1 16.69%, rgb(247, 245, 245) 100%);
+    padding-bottom: 30px;
 }
 /*SECTION 1-2*/
 .main-exchange-container{
@@ -153,7 +154,7 @@ main{
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
-    color: #757575;
+    color: var(--warm-black);
 }
 .main-tables-container {
     display: flex;
@@ -172,6 +173,7 @@ main{
     height: 360px;
     margin: 0 auto;
     font-family: "Inter", "sans-serif";
+    
 }
 
 .main-currency-table  .currency-table--tittle, 
@@ -208,7 +210,7 @@ main{
 .comission-table--container table{
     width: 100%;
     height: 100%;
-    box-shadow: 0 5px 5px 5px rgba(46, 46, 46, 0.973);
+    box-shadow: 0 3px 3px 3px rgba(58, 49, 49, 0.973);
     border-radius: 15px 15px;
 }
 
@@ -216,10 +218,10 @@ main{
 .comission-table--container td{
     width: 50%;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.9rem;
-    color: var(--grey);
-    background-color: var(--just-white);
+    color: var(--off-white  );
+    background-image: url('./assets/img/background-tables.jpg');
 }
 
 .currency-table--container .table__top-left,
@@ -243,9 +245,9 @@ main{
 .currency-table--container .table__right,
 .comission-table--container .table__right {
     font-size: 1.4rem;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.7rem;
-    color: #757575;
+    color: var(--off-white);
 }
 
 .main-exchange-container .down{
@@ -285,7 +287,7 @@ main{
 }
 .currency-table--date p,
 .comission-table--date p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.5rem;
     color: var(--warm-black);
@@ -299,18 +301,20 @@ main{
     min-width: 320px;
     height: auto;
     padding: 20px 10px;
-    background-color: var(--warm-black);
-
+    margin-top: 20px;
+    text-align: center;
+    background-color: var(--black);
 }
 
 .product-detail--batata-logo {
     position: absolute;
-    width: 40px; 
-    height: 25px;
+    width: 50px; 
+    height: 30px;
     top: calc(0% - 12.5px);
     left: calc(50% - 20px);
     background-image: url('./assets/icons/batata.svg');
-
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .product-detail--title {
     width: 90%;
@@ -318,7 +322,6 @@ main{
     height: auto;
     margin: 0 auto;
     margin-top: 50px;
-    text-align: center;
 }
 .product-detail--title h2 {
     margin-bottom: 20px;
@@ -331,9 +334,9 @@ main{
 .product-detail--title p {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 1.8rem;
-    color: #808080;
+    color: var(--off-white);
 }
 
 .product-detail--card {
@@ -343,7 +346,7 @@ main{
     min-height: 150px;
     margin: 15px auto;
     padding: 15px;
-    background-color: var(--black);
+    background-color: #131111;
     border-radius: 5px;
     box-shadow: 0 40px 8px rgba(0, 0, 0 ,0.16);
 }
@@ -351,8 +354,8 @@ main{
  y se aplique a todos los iconos de las cartas*/
 .product-detail--card .icon-card{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
     background-size: cover;
     background-position: center;
@@ -406,7 +409,6 @@ main{
 }
 
 .plan-container {
-    background-color: var(--off-white);
     text-align: center;
     min-width: 320px;
 }
@@ -445,13 +447,13 @@ main{
 }
 
 .main-table-plan-container .plan-basic-container {
-    background-color: var(--just-white);
+    background: linear-gradient(180.8deg, rgb(5, 3, 3) 16.69%, rgb(12, 8, 240) 100%);
 }
 .main-table-plan-container .plan-recommended-container {
-    background-color: #000080;
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(29 3% 6%) 100%);
 }
 .main-table-plan-container .plan-premium-container {
-    background-color: #000000;
+    background: linear-gradient(180.8deg, #141212 16.69%, hwb(281 4% 13%) 100%);
 }
 .main-table-plan-container .plan-basic,
 .plan-recommended, .plan-premium {
@@ -465,6 +467,7 @@ main{
     padding: 6px;
     border-radius: 8px;
     color: var(--just-white);
+    background-color: var(--just-white);
 }
 .main-table-plan-container .plan-basic {
     background: linear-gradient(180.8deg, #050303 16.69%, hwb(241 3% 6%) 100%);
@@ -491,9 +494,6 @@ main{
     padding: 20px;
     font-size: 1.4rem;
     font-weight: 500;
-}
-.plan-recommended-container .plan-title,
-.plan-premium-container .plan-title {
     color: var(--just-white);
 }
 
@@ -503,16 +503,9 @@ main{
     font-size: 5.3rem;
     font-weight: bold;
     padding: 5px 0;
-}
-.plan-basic-container .plan-price {
-    color: var(--black);
-}
-.plan-recommended-container .plan-price {
     color: var(--just-white);
 }
-.plan-premium-container .plan-price {
-    color: var(--just-white);
-}
+
 .plan-basic-container sup,
 .plan-recommended-container sup,
 .plan-premium-container sup {
@@ -520,7 +513,7 @@ main{
     font-weight: 300;
 }
 .plan-basic-container sup {
-    color: var(--black);
+    color: var(--just-white);
 }
 .plan-recommended-container sup {
     color: var(--just-white);
@@ -533,12 +526,8 @@ main{
 .plan-recommended-container .plan-saving,
 .plan-premium-container .plan-saving  {
     font-size: 1.2rem;
-    color: #757575;
     padding-bottom: 15px;
-}
-.plan-recommended-container .plan-saving,
-.plan-premium-container .plan-saving {
-    color: var(--just-white);
+    color: var(--off-white);
 }
 
 .plan-basic-container .plan-btn--basic,
@@ -552,21 +541,17 @@ main{
     font-weight: bold;
     line-height: 1.8rem;
     cursor: pointer;
-}
-.plan-basic-container .plan-btn--basic {
-    background-color: rgb(25, 35, 170);
-    border: 2px solid rgb(226, 162, 23);
-    color: var(--just-white);
-}
-.plan-recommended-container .plan-btn--recommended{
-    background-color: var(--just-white);
-    border: 2px solid rgb(226, 162, 23);
-    color: var(--black);
-}
-.plan-premium-container .plan-btn--premium {
-    background-color: rgba(148, 18, 209, 0.979);
     border: 2px solid #ffffff;
     color: var(--just-white);
+}
+.plan-basic-container .plan-btn--basic {
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(241 3% 6%) 100%);
+}
+.plan-recommended-container .plan-btn--recommended{
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(29 3% 6%) 100%);
+}
+.plan-premium-container .plan-btn--premium {
+    background: linear-gradient(180.8deg, #050303 16.69%, hwb(281 4% 13%) 100%);
 }
 
 .plan-btn--basic .btn-icon--basic,
@@ -599,19 +584,19 @@ footer .social-container ul {
     font-weight: 500;
     list-style: none;
 }
-
+footer .social-container li {
+    padding: 5px;
+}
 footer a {
     color: var(--just-white);
+    text-decoration: none;
 }
-.footer a:hover {
-    text-decoration: underline;
-}
+
 footer .img-container {
     display: flex;
     width: 50%;
-    height: 40px;
     justify-content: center;
+    align-items: center;
     font-size: 1.2rem;
-    padding: 40px;
     color: var(--just-white);
 }
